@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<!--[if !IE]><!--><html lang="en"><!--<![endif]-->
+
+<head dir="ltr">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<link  rel="stylesheet"  href="phase1.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="icon" type="image/png" href="favicon-16x16.png" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  
+<title>P3E</title>
+
+<link rel="icon" type="image/x-icon" href="/static/images/favicon.ico" />
+
+
+
+
+</head>
+
+<body class="ltr view-register lang_en">
+  <div class="window-wrap" dir="ltr">
+
+
+
+<section class="introduction">
+  <header>
+	<h1 class="title">
+		<span class="title-sub">Evaluation pair à pair participative</span>
+	</h1>
+  </header>
+</section>
+
+<section class="register container">
+  <section role="main" class="content">
+	
+	  <input type="hidden" name="csrfmiddlewaretoken" value="6nNWITlRPAI3wL6lf1MpiUKJnq7UP8Vn">
+
+		<h2> {self.mainCourse} </h2>
+	  	<iframe src="https://docs.google.com/presentation/d/13p62SEpMwyXBshNHy1KlCsrGXdckrwnBDnckLJlegTc/embed?start=false&amp;loop=false&amp;delayms=3000" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" frameborder="0" height="600" width="900"></iframe>
+
+	  <div class="form-group form-group-lg" id="phase1">
+		<h2 class="">Phase 1 : Questions</h2>
+
+		<p class="instructions">
+		Faites de votre mieux pour répondre aux questions suivantes en vous aidant du cours. </br>
+		Veuillez à noter la pertinence/intérêt des questions entre 1 et 5. </br>
+		Attention ! Vous avez exactement dix points à distribuer entre les trois questions.
+	  	</p>
+	  
+		  <div class="">   
+          
+<div class="" id="field-education-level">
+
+      
+ <li class="">
+	<div class="">
+      <label for="">Question 1 </label>
+			<p> {self.quest1} </p>
+			<textarea id="rep1" required aria-required="true"> </textarea>
+			<input class="form-control" size="2" id="note1" min="0" max="5" type="number" name="email" value=""  />
+		
+	</div>
+        </li>
+         
+ <li class="field-group field-gender">
+            <div class="field optional select" id="field-gender">
+              <label for="">Question 2</label>
+			<p> {self.quest2} </p>
+			<textarea id="rep2" required aria-required="true"> </textarea>
+			<input class="form-control" size="2" id="note2" min="0" max="5" type="number" name="email" value="" />
+            </div>
+          </li>
+          
+	<li class="field-group field-yob">
+            <div class="field optional select" id="field-yob">
+              <label for="Question3">Question 3</label>
+			<p> {self.quest3} </p>
+			<textarea id="rep3" required aria-required="true"> </textarea>
+			<input class="form-control" size="2" id="note3" min="0" max="5" type="number" name="email" value=""  />
+			
+	</div>
+</div>
+</br>
+		<button name="submit" type="submit" id="submit1" class="action action-primary action-update register-button">Valider</button>
+	  </div>
+		  </div>
+	  </div>
+	  
+	  <div id="phase2" style="display: none;">
+	  	<h2 class="sr">Phase 2 : Soumission</h2>
+	  	<p class="instructions">
+			Avec ce que vous venez d'apprendre sur ce cours, proposez une question que vous jugez intéressante pour les prochains participants ainsi que sa réponse associée. </br>
+			La qualité de votre question sera évaluée et comptera dans votre note finale. </br>
+		
+	  	</p>
+	  	<label for="Question1">Votre question : </label> </br>
+		<textarea id="questSoumise"> </textarea>
+	  	</br>
+	  	<label for="Question1">Votre réponse : </label> </br>
+		<textarea id="repSoumise"> </textarea>
+		</br>
+	  	<button name="submit" type="submit" id="submit2" class="action action-primary action-update register-button">Valider</button>
+	  </div>
+	  
+	  <div id="phase3" style="display: none;">
+	  	<h2 class="sr">Phase 3 : Correction</h2>
+	  	<p class="instructions">
+			Dans cette partie vous allez soumettre une question et une réponse </br>
+			Veuillez à noter la pertinence/intérêt des questions entre 1 et 5. </br>
+			Attention ! Vous avez exactement dix points à distribuer entre les trois questions.
+	  	</p>
+	  	<label for="rep">Question 1 :</label> </br>
+	  	<p> {self.quest1} </p>
+	  	<p><b>Réponse étudiant</b> </br> {self.rep1} </p>
+	  	<p><b>Réponse correcteur</b> </br> {self.rpp1} </p> </br>
+		<input class="form-control" size="2" id="note1" min="0" max="5" type="number" name="email" value="" required aria-required="true" />
+	  	</br>
+	  	<label for="rep">Question 2 :</label> </br>
+	  	<p> {self.quest2} </p>
+	  	<p><b>Réponse étudiant</b> </br> {self.rep2} </p>
+	  	<p><b>Réponse correcteur</b> </br> {self.rpp2} </p> </br>
+		<input class="form-control" size="2" id="note1" min="0" max="5" type="number" name="email" value="" required aria-required="true" />
+		</br>
+		<label for="rep">Question 3 :</label> </br>
+		<p> {self.quest3} </p>
+		<p><b>Réponse étudiant</b></br> {self.rep3} </p>
+		<p><b>Réponse correcteur</b> </br> {self.rpp3} </p> </br>
+		<input class="form-control" size="2" id="note1" min="0" max="5" type="number" name="email" value="" required aria-required="true" />
+		</br>
+		<label for="rep">Question 4 :</label> </br>
+		<p> {self.quest1} </p>
+		<p><b>Réponse étudiant</b> </br> {self.rep1} </p>
+		<p><b>Réponse correcteur</b> </br> {self.rep1} </p> </br>
+		<input class="form-control" size="2" id="note1" min="0" max="5" type="number" name="email" value="" required aria-required="true" />
+		</br>
+		<label for="rep">Question 5 :</label> </br>
+		<p> {self.quest1} </p>
+		<p><b>Réponse étudiant</b> </br> {self.rep1} </p>
+		<p><b>Réponse correcteur</b> </br> {self.rep1} </p> </br>
+		<input class="form-control" size="2" id="note1" min="0" max="5" type="number" name="email" value="" required aria-required="true" />
+		</br>
+		<label for="pre">Question 6 :</label> </br>
+		<p> {self.quest1} </p>
+		<p><b>Réponse étudiant</b> </br> {self.rep1} </p>
+		<p><b>Réponse correcteur</b> </br> {self.rep1} </p> </br>
+		<input class="form-control" size="2" id="note1" min="0" max="5" type="number" name="email" value="" required aria-required="true" />
+		</br>
+		<label for="rep">Question 7 :</label> </br>
+		<p> {self.quest1} </p>
+		<p><b>Réponse étudiant</b> </br> {self.quest1} </p>
+		<p><b>Réponse correcteur</b> </br> {self.quest1} </p> </br>
+		<input class="form-control" size="2" id="note1" min="0" max="5" type="number" name="email" value="" required aria-required="true" />
+		</br>
+		<label for="rep">Question 8 :</label> </br>
+		<p> {self.quest1} </p>
+		<p><b>Réponse étudiant</b> </br> {self.quest1} </p>
+		<p><b>Réponse correcteur</b> </br> {self.quest1} </p> </br>
+		<input class="form-control" size="2" id="note1" min="0" max="5" type="number" name="email" value="" required aria-required="true" />
+		</br>
+		<label for="rep">Question 9 :</label> </br>
+		<p> {self.quest1} </p>
+		<p><b>Réponse étudiant</b> </br> {self.quest1} </p>
+		<p><b>Réponse correcteur</b> </br> {self.quest1} </p> </br>
+		<input class="form-control" size="2" id="note1" min="0" max="5" type="number" name="email" value="" required aria-required="true" />
+		</br>
+		
+	  	<button name="submit" type="submit" id="submit3" class="action action-primary action-update register-button">Valider</button>
+	  </div>
+	  
+	  <div id="finish" style="display: none;">
+	  <h2 class="sr">Fin de simulation</h2>
+</div>
+
+	  
+	
+  </section>
+
+
+</section>
+
+	  
+
+
+		
+		  
+  
+	
+
+
+<div class="wrapper wrapper-footer">
+  <footer>
+
+
+	<div class="footer-about-openedx">
+	  <p>
+		<a href="http://openedx.org/">
+		  <img src="https://files.edx.org/openedx-logos/edx-openedx-logo-tag.png" alt="Powered by Open edX" width="140" />
+		</a>
+	  </p>
+	</div>
+  </footer>
+</div>
+
+		
+
+  </div>
+
+	
+	
+	
+</div>
+</body>
+</html>
